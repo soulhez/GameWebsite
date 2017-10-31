@@ -1,0 +1,171 @@
+/* 
+	*Active => 激活状态
+	*Close  => 关闭状态
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.close{
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	z-index: 100000;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	font: bolder;
+	border-radius: 25px;
+}
+
+/* 首页背景图 */
+.contentBg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../res/poster/1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -100;
+	transition: all 0.5s;
+}
+.contentBgClose{
+	width: 0;
+}
+.contentBgActive{
+	width: 100%;
+}
+
+/* 简单导航 */
+nav{
+	position: fixed;
+	top: 0;
+	width:100%;
+	height: 80px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+	user-select: none;
+	z-index: 99999;
+	opacity: 0.3;
+	transition: all 0.3s;
+}
+nav:hover{
+	opacity: 1;
+}
+nav span{
+	display: inline-block;
+	width: 20%;
+	height: 80px;
+	color: black;
+	line-height: 80px;
+	cursor: pointer;
+	transition: transform 0.8s;
+}
+nav span:hover{
+	transform: scale(1.01);
+	color: white;
+	background-color: black;
+}
+/* 推荐 */
+.news{
+}
+.news div{
+	height: 100%;
+	overflow: hidden;
+	border-left: 5px solid black;
+	background-size: cover; 
+	background-repeat: no-repeat;
+	transition: flex-grow 0.4s , opacity 0.8s;
+}
+.newsActive{
+	width: 100%;
+	height: 100%;
+	transition: height 0.5s, width 0.5s ease 0.4s;
+}
+.newsClose{
+	width: 0;
+	height: 0;
+	transition: width 0.5s, height 0.3s 0.5s;
+}
+/*栅格内容*/
+/*选中*/
+.newsModActive{
+	flex-grow: 10;
+	opacity: 1;	
+}
+/*关闭*/
+.newsModClose{
+	flex-grow: 1;
+	opacity: .3; 
+}
+
+
+/* 分类 */
+.category{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+.category span{
+	display: inline-block;
+	height: 33.3%;
+	width: 25%;
+	padding: 0.5%;
+	cursor: pointer;
+	text-align: center;
+	background-color: yellow;
+	background-clip: content-box;
+	border-radius: 1rem;
+}
+.cateActive{
+	height: 100%;
+	opacity: 1;
+	transition: height 0.8s;
+}
+.cateClose{
+	height: 0;
+	width: 0;
+	opacity: 0;
+	transition: height 0.8s 0.5s;
+}
+
+
+/* 我 */
+.me{
+	margin: 0 auto;
+	background-color: blue;
+}
+.meActive{
+	width: 80%;
+	height: 100%;
+	opacity: 1;
+	transition: height 0.3s, width 0.5s 0.3s, opacity 0.5s;
+}
+.meClose{
+	width: 5%;
+	height: 0%;
+	opacity: 0;
+	transition: height 0.3s, width 0.5s 0.3s, opacity 0.5s;
+}
+
