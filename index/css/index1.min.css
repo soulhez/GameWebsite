@@ -1,0 +1,25 @@
+*{margin:0;padding:0;box-sizing:border-box;border:none}
+body,html{width:100%;height:100%;margin:0 auto}
+.container{display:flex;justify-content:flex-end;flex-wrap:wrap;margin:0 auto;width:80%;height:100%}
+.items{width:100%;height:40%;margin-top:.5%;border-radius:10px;background-size:cover;opacity:.7}
+.items:hover{opacity:1;cursor:pointer}
+.close{position:absolute;top:1%;right:1%;z-index:100000;cursor:pointer;width:50px;height:50px;line-height:50px;text-align:center;background-color:#000;color:#fff;font:bolder;border-radius:25px}
+.contentBg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url(../res/poster/1.jpg);background-size:cover;background-repeat:no-repeat;z-index:-100;transition:all .5s}
+.contentBgClose{width:0}
+.contentBgActive{width:100%}
+nav{position:fixed;top:0;width:100%;height:80px;display:flex;text-align:center;justify-content:center;flex-wrap:nowrap;user-select:none;z-index:99999;opacity:.3;transition:all .3s}
+nav:hover{opacity:1}
+nav span{display:inline-block;width:20%;height:80px;color:#000;line-height:80px;cursor:pointer;transition:transform .8s}
+nav span:hover{transform:scale(1.01);color:#fff;background-color:#000}
+.news div{height:100%;overflow:hidden;border-left:5px solid #000;background-size:cover;background-repeat:no-repeat;transition:flex-grow .4s,opacity .8s}
+.newsActive{width:100%;height:100%;transition:height .5s,width .5s ease .4s}
+.newsClose{width:0;height:0;flex-grow:1;transition:width .5s,height .3s .5s}
+.newsModActive{flex-grow:10;opacity:1}
+.newsModClose{flex-grow:1;opacity:.3}
+.category{width:100%;height:100%;display:flex;justify-content:flex-start;align-content:flex-start;flex-wrap:wrap}
+.category span{display:inline-block;height:33.3%;width:25%;padding:.5%;cursor:pointer;text-align:center;background-color:#ff0;background-clip:content-box;border-radius:1rem}
+.cateActive{height:100%;opacity:1;transition:height .8s}
+.cateClose{height:0;width:0;opacity:0;transition:height .8s .5s}
+.me{margin:0 auto;background-color:#00f}
+.meActive{width:80%;height:100%;opacity:1;transition:height .3s,width .5s .3s,opacity .5s}
+.meClose{width:5%;height:0%;opacity:0;transition:height .3s,width .5s .3s,opacity .5s}

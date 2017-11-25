@@ -1,171 +1,109 @@
-/* 
-	*Active => 激活状态
-	*Close  => 关闭状态
-*/
-
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border: none;
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
 }
-body{
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	overflow: hidden;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-.close{
-	position: absolute;
-	top: 1%;
-	right: 1%;
-	z-index: 100000;
-	cursor: pointer;
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-	background-color: black;
-	color: white;
-	font: bolder;
-	border-radius: 25px;
+@font-face {
+  font-family: "H1Title";
+  src: url('/res/font/Piximisa.ttf');
 }
-
-/* 首页背景图 */
-.contentBg{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url('../res/poster/1.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: -100;
-	transition: all 0.5s;
+@font-face {
+  font-family: "bgText";
+  src: url('/res/font/Geosans.ttf');
 }
-.contentBgClose{
-	width: 0;
+h1 {
+  width: 80%;
+  text-align: center;
+  font-family: "H1Title";
+  margin-top: 2.5%;
+  letter-spacing: 3px;
 }
-.contentBgActive{
-	width: 100%;
+.container {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
-
-/* 简单导航 */
-nav{
-	position: fixed;
-	top: 0;
-	width:100%;
-	height: 80px;
-	display: flex;
-	text-align: center;
-	justify-content: center;
-	flex-wrap: nowrap;
-	user-select: none;
-	z-index: 99999;
-	opacity: 0.3;
-	transition: all 0.3s;
+/* 简略图片 */
+.gamebg {
+  width: 100%;
+  height: 30%;
+  margin-top: 1%;
+  opacity: .7;
+  border-radius: 1%;
 }
-nav:hover{
-	opacity: 1;
+.gamebg:hover {
+  opacity: 1;
+  cursor: pointer;
 }
-nav span{
-	display: inline-block;
-	width: 20%;
-	height: 80px;
-	color: black;
-	line-height: 80px;
-	cursor: pointer;
-	transition: transform 0.8s;
+.gamebg:hover span:nth-child(1) {
+  left: 12%;
 }
-nav span:hover{
-	transform: scale(1.01);
-	color: white;
-	background-color: black;
+.gamebg:hover span:nth-child(2) {
+  left: 2%;
 }
-/* 推荐 */
-.news{
+.gamebg span:nth-child(1) {
+  position: relative;
+  top: 35%;
+  left: 8%;
+  color: white;
+  font-size: 30px;
+  transition: all 0.4s;
 }
-.news div{
-	height: 100%;
-	overflow: hidden;
-	border-left: 5px solid black;
-	background-size: cover; 
-	background-repeat: no-repeat;
-	transition: flex-grow 0.4s , opacity 0.8s;
+.gamebg span:nth-child(2) {
+  position: relative;
+  top: 50%;
+  left: 0%;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  transition: all 0.4s;
 }
-.newsActive{
-	width: 100%;
-	height: 100%;
-	transition: height 0.5s, width 0.5s ease 0.4s;
+.warframeBg {
+  width: 100%;
+  height: 30%;
+  margin-top: 1%;
+  opacity: .7;
+  border-radius: 1%;
+  background-image: url("/res/pic/ivara.jpg");
+  background-size: cover;
+  font-family: "bgText";
+  letter-spacing: 1px;
+  transition: background-image 0.1s;
 }
-.newsClose{
-	width: 0;
-	height: 0;
-	transition: width 0.5s, height 0.3s 0.5s;
+.warframeBg:hover {
+  opacity: 1;
+  cursor: pointer;
 }
-/*栅格内容*/
-/*选中*/
-.newsModActive{
-	flex-grow: 10;
-	opacity: 1;	
+.warframeBg:hover span:nth-child(1) {
+  left: 12%;
 }
-/*关闭*/
-.newsModClose{
-	flex-grow: 1;
-	opacity: .3; 
+.warframeBg:hover span:nth-child(2) {
+  left: 2%;
 }
-
-
-/* 分类 */
-.category{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: flex-start;
-	align-content: flex-start;
-	flex-wrap: wrap;
+.warframeBg span:nth-child(1) {
+  position: relative;
+  top: 35%;
+  left: 8%;
+  color: white;
+  font-size: 30px;
+  transition: all 0.4s;
 }
-.category span{
-	display: inline-block;
-	height: 33.3%;
-	width: 25%;
-	padding: 0.5%;
-	cursor: pointer;
-	text-align: center;
-	background-color: yellow;
-	background-clip: content-box;
-	border-radius: 1rem;
+.warframeBg span:nth-child(2) {
+  position: relative;
+  top: 50%;
+  left: 0%;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  transition: all 0.4s;
 }
-.cateActive{
-	height: 100%;
-	opacity: 1;
-	transition: height 0.8s;
-}
-.cateClose{
-	height: 0;
-	width: 0;
-	opacity: 0;
-	transition: height 0.8s 0.5s;
-}
-
-
-/* 我 */
-.me{
-	margin: 0 auto;
-	background-color: blue;
-}
-.meActive{
-	width: 80%;
-	height: 100%;
-	opacity: 1;
-	transition: height 0.3s, width 0.5s 0.3s, opacity 0.5s;
-}
-.meClose{
-	width: 5%;
-	height: 0%;
-	opacity: 0;
-	transition: height 0.3s, width 0.5s 0.3s, opacity 0.5s;
-}
-

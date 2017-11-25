@@ -8,87 +8,17 @@
 
 </head>
 <body>
-	<div class="close">X</div>
-	<nav>
-		<span>推荐</span>
-		<span>分类</span>
-		<span>我</span>
-	</nav>
-
-	<div class="contentBg"></div>
-
-	<div class="me meClose">
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-	
-	<!-- 推荐 -->
-	<div class="news newsClose">
-		<div style="background-color: blue;">2</div>
-		<div style="background-color: yellow;"></div>
-		<div style="background-color: orange;"></div>
-		<div style="background-color: black;"></div>
-		<div style="background-color: blue;"></div>
-	</div>
-	
-	<!-- 分类 -->
-	<div class="category cateClose">
-		<span onclick="location.href='/category/category.html';">1</span>
-		<span>2</span>
-		<span>3</span>
-		<span>4</span>
-		<span>5</span>
-		<span>6</span>
-		<span>7</span>
-		<span>8</span>
-		<span>9</span>
-		<span>10</span>
-		<span>11</span>
+	<h1>GAMES</h1>
+	<div class="container">
+		<div class="warframeBg" onclick="javascript:location.href='/detail/index.html'">
+			<span>WARFRAME</span>
+			<span>星际战甲</span>
+		</div>
 	</div>
 
-	<script src="js/animation.js"></script>
+
 	<script>
-		window.onload=function(){
-			document.body.style.height=window.innerHeight+'px';
-			slideMove(document.getElementsByClassName("news")[0]);
-		}
 
-		var news = document.getElementsByClassName("news")[0];
-		var cate = document.getElementsByClassName("category")[0];
-		var me = document.getElementsByClassName("me")[0];
-		var back = document.getElementsByClassName("contentBg")[0];
-
-
-		document.getElementsByClassName('close')[0].onclick=function(){
-			news.className="news newsClose"
-			me.className="me meClose"
-			cate.className="category cateClose"
-			back.className="contentBg contentActive"
-		};
-		
-		// 展开 推荐
-		document.getElementsByTagName("span")[0].onclick=function(){
-			news.className="news newsActive"
-			me.className="me meClose"
-			cate.className="category cateClose"
-			back.className="contentBg contentBgClose"
-			slideMove(news);
-		}
-		// 展开 分类
-		document.getElementsByTagName("span")[1].onclick=function(){
-			cate.className="category cateActive"
-			news.className="news newsClose"
-			me.className="me meClose"
-			back.className="contentBg contentBgClose"
-		}
-		// 展开 自己
-		document.getElementsByTagName("span")[2].onclick=function(){
-			me.className="me meActive"
-			cate.className="category cateClose"
-			news.className="news newsClose"
-			back.className="contentBg contentBgClose"
-		}
 	</script>
 </body>
 </html>
