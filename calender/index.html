@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>日历</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="calender.css">
+</head>
+<body>
+	<div class="cover"></div>
+	<div class="container">
+		<button data-type="calender">切换</button>
+		<span class="active">自动同步</span>
+		<div id="dialog">	<!-- dialog -->
+			<span></span>
+			<span>X</span>
+			<ul></ul>
+			<div id="schedule">
+				<input type="text">
+				<span>加</span>
+			</div>
+		</div>
+		<ul id="calender">	<!-- 日历模式 -->
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+			<li>13</li>
+			<li>14</li>
+			<li>15</li>
+			<li>16</li>
+			<li>17</li>
+			<li>18</li>
+			<li>19</li>
+			<li>20</li>
+			<li>21</li>
+			<li>22</li>
+			<li>23</li>
+			<li>24</li>
+			<li>25</li>
+			<li>26</li>
+			<li>27</li>
+			<li>28</li>
+			<li>29</li>
+			<li>30</li>
+			<li>31</li>
+			<li>日</li>
+			<li>历</li>
+			<li>模</li>
+			<li>式</li>
+		</ul>
+		<div id="lists">	<!-- 列表模式 -->
+		</div>
+	</div>
+<!-- <p style="position: fixed;right: 0; top: 500px;cursor:pointer;" onclick="javascript:localStorage.clear();">clear</p>
+<p style="position: fixed;right: 0;top: 450px;cursor:pointer;" onclick="javascript:console.log(localStorage);">show</p> -->
+
+
+<!-- cdn jQuery -->
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="calender.js"></script>
+<script>
+	$(window).load(handleDate());
+	$("button").on("click", changeType);
+	$("#dialog > span, .cover").on("click",dialogOC);
+	$("#schedule > span").on("click",addNew);
+	$("#calender").on("click", function(e){readyToAdd(e)});
+	$(".container > span").on("click", function(e){synKey(e);});
+</script>
+</body>
+</html>

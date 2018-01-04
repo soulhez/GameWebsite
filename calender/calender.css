@@ -1,0 +1,141 @@
+@charset "UTF-8"
+*{
+	box-sizing: border-box;
+}
+html,body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	user-select: none;
+	overflow: hidden;
+}
+.container{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+	user-select: none;
+}
+#dialog{
+	display: none;
+	position: fixed;
+	top: 25%;
+	width: 80%;
+	z-index: 99999;
+	background-color: white;
+	padding: 1rem;
+}
+#dialog>ul{
+	list-style-type: decimal-leading-zero	;
+}
+#dialog > span:nth-child(1){	/* 日期显示 */
+	border-bottom: 1px dotted black;
+}
+#dialog > span:nth-child(2){	/* 关闭dialog */
+	cursor: pointer;
+	float: right;
+}
+#dialog > span:nth-child(2)::after{
+	clear: both;
+}
+#schedule{
+	display: flex;
+	width: 100%;
+	flex-wrap: no-wrap;
+	overflow: hidden;
+}
+#schedule > input{
+	width: 90%;
+	height: 1.3rem;
+}
+#schedule > span{
+	width: 10%;
+	cursor: pointer;
+	margin-left: 10px;
+	border: 1px solid black; 
+	text-align: center;
+	border-radius: 1%;
+}
+#calender{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+	width: 100%;
+}
+#calender li{
+	text-align: center;
+	width: 14.2%;
+	height: 70px;
+	line-height: 70px;
+	list-style-type: none;
+	border-bottom: 1px dotted black;
+}
+#calender li:hover{
+	cursor: pointer;
+}
+.cover{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99998;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .9)
+}
+#lists{
+	display: none;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+#lists > div{
+	width: 100%;
+}
+#lists > div > ul{
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	list-style-type: decimal-leading-zero	;
+}
+#lists p{
+	position: sticky;
+	top: 0;
+	background-color: white;
+	border-bottom: black dotted 1px;
+}
+#lists li{
+	width: 100%;
+}
+#lists span:nth-child(1){
+	text-overflow: clip;
+	overflow: hidden;
+	width: 70%;
+	margin-right: 10%;
+	display: inline-block;
+}
+#lists span:nth-child(2){
+}
+#lists span:nth-child(2)::after{
+}
+
+.container > span.active{
+	margin: 0 0.1%;
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+.container > span.ing{
+	margin: 0 0.1%;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+}
+.container > span{
+	margin: 0 0.1%;
+	background-color: gray;
+	color: white;
+	cursor: pointer;
+}

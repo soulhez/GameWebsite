@@ -1,0 +1,33 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  width: 75%;
+  flex-wrap: wrap;
+}
+.container article {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  white-space: pre-wrap;
+  line-height: 1.5em;
+}
+.container .paiXi {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  height: 100%;
+  width: 400%;
+  background-color: #ffff00;
+}

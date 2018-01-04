@@ -1,0 +1,90 @@
+@charset "utf-8";
+// 背景图片地址
+@warframeBg:url("/res/pic/ivara.jpg");
+
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+@font-face{
+	font-family: "H1Title";
+	src: url('/res/font/Piximisa.ttf');
+}
+@font-face{
+	font-family: "bgText";
+	src: 
+		url('/res/font/Geosans.ttf');
+}
+h1{
+	width: 80%;
+	text-align: center;
+	font-family: "H1Title";
+	margin-top: 2.5%;
+	letter-spacing: 3px;
+}
+
+.container{
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
+}
+/* 简略图片 */ 
+.games{
+	position: relative;
+	width: 100%;
+	height: 30%;
+	margin-top: 1%;
+	opacity: .7;
+	border-radius: 1%;
+	font-family: "bgText";
+	letter-spacing: 1px;
+	overflow: hidden;	
+	&:hover{
+		opacity: 1;
+		cursor: pointer;
+
+		span:nth-child(2){
+			left: 12%;
+		}
+		span:nth-child(3){
+			left: 2%;
+		}
+	}
+	.gamesBg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+	}
+	span:nth-child(2){
+		position: relative;
+		top: 35%;
+		left: 8%;
+		color: white;
+		font-size: 30px;
+		transition: all 0.4s;
+	}
+	
+	span:nth-child(3){
+		position: relative;
+		top: 50%;
+		left: 0%;
+		color: white;
+		font-size: 20px;
+		font-style: italic;
+		transition: all 0.4s;
+	}
+}
+

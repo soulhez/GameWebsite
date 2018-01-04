@@ -34,63 +34,36 @@ h1 {
   margin: 0 auto;
 }
 /* 简略图片 */
-.gamebg {
+.games {
+  position: relative;
   width: 100%;
   height: 30%;
   margin-top: 1%;
   opacity: .7;
   border-radius: 1%;
-}
-.gamebg:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-.gamebg:hover span:nth-child(1) {
-  left: 12%;
-}
-.gamebg:hover span:nth-child(2) {
-  left: 2%;
-}
-.gamebg span:nth-child(1) {
-  position: relative;
-  top: 35%;
-  left: 8%;
-  color: white;
-  font-size: 30px;
-  transition: all 0.4s;
-}
-.gamebg span:nth-child(2) {
-  position: relative;
-  top: 50%;
-  left: 0%;
-  color: white;
-  font-size: 20px;
-  font-style: italic;
-  transition: all 0.4s;
-}
-.warframeBg {
-  width: 100%;
-  height: 30%;
-  margin-top: 1%;
-  opacity: .7;
-  border-radius: 1%;
-  background-image: url("/res/pic/ivara.jpg");
-  background-size: cover;
   font-family: "bgText";
   letter-spacing: 1px;
-  transition: background-image 0.1s;
+  overflow: hidden;
 }
-.warframeBg:hover {
+.games:hover {
   opacity: 1;
   cursor: pointer;
 }
-.warframeBg:hover span:nth-child(1) {
+.games:hover span:nth-child(2) {
   left: 12%;
 }
-.warframeBg:hover span:nth-child(2) {
+.games:hover span:nth-child(3) {
   left: 2%;
 }
-.warframeBg span:nth-child(1) {
+.games .gamesBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.games span:nth-child(2) {
   position: relative;
   top: 35%;
   left: 8%;
@@ -98,7 +71,7 @@ h1 {
   font-size: 30px;
   transition: all 0.4s;
 }
-.warframeBg span:nth-child(2) {
+.games span:nth-child(3) {
   position: relative;
   top: 50%;
   left: 0%;

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" href="#">
+</head>
+<body>
+	<div class="container">
+		<h6>WARFRAME</h6>
+		<article>
+他们被称作 Tenno。是枪和剑的勇士：Warframe 盔甲的主人。那些古老战争的幸存者在废墟中漂流，现在他们再一次被需要。
+
+Grineer 和他们庞大的军队在整个太阳系扩张。 
+
+一个召唤 Tenno到一个古老地方的声音回响在整个星际。他们在召唤你。
+
+让 Lotus 引导你。
+
+她将你从低温密室中解救了出来，给予你生存的机会。Grineer 会找到你，你必须做好准备。Lotus 将传授你 Warframes 的使用方法和解开它们力量的秘密方法。
+
+来吧 TENNO，你必须参战。
+		</article>
+		<div class="paiXi">
+				<div id="GRINEER">
+					<p class="blockKind"></p>
+					<p class="paiXiTitle">
+						派系: 
+						GRINEER
+					</p>
+					<p class="paiXiContent">
+						人说数量就是力量－Grineer 就是活生生的证明。历经数个世纪以来的复制，使他们的基因不断衰退。但这群人透过武力扩张他们的邪恶帝国，征服任何试图阻挡他们的人。
+					</p>
+				</div>
+				
+				<div id="CORPUS">
+					<p class="blockKind"></p>
+					<p class="paiXiTitle">
+						派系: 
+						CORPUS
+					</p>
+					<p class="paiXiContent">
+						彻底体现了宇宙中的寒冷真空－无情地夺取一切未受保护的事物。在利益的驱使之下，为求快速有效的破坏，Corpus 商会的部分人员会大量使用代理机器人。
+					</p>
+				</div>
+
+				<div id="INFESTED">
+					<p class="blockKind"></p>
+					<p class="paiXiTitle">
+						派系: 
+						INFESTED
+					</p>
+					<p class="paiXiContent">
+						Infestation 不仅仅只是一种疾病－更该说是由扭曲的肉块与怪物所混和成的真实恐惧,最后只留下死亡与破坏。
+					</p>
+				</div>
+
+				<div id="SENTIENTS">
+					<p class="blockKind"></p>
+					<p class="paiXiTitle">
+						派系: 
+						SENTIENTS
+					</p>
+					<p class="paiXiContent">
+						来自远古之战的窃窃私语开始从最浓重的阴影中逃离，什么样的骇人秘密会被召唤出来？
+					</p>
+				</div>
+		</div>
+
+
+	<script src="/res/lib/jquery-3.2.1.min.js"></script>
+	<script>
+		$(window).on("scroll",function(){
+			if($(window).scrollTop()>=80){
+				$("img").attr("src","/res/pic/warframe/headerLogo.png").removeClass("img1").addClass("img2");
+			}
+			else{
+				$("img").attr("src","/res/pic/warframe/top-center-Logo.png").removeClass("img2").addClass("img1");
+			}
+		});
+	</script>
+</body>
+</html>
