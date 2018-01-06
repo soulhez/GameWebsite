@@ -2,14 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
+<body data-stat="index">
+  <canvas id="game" class="ui-start">
 
+  </canvas>
+  <div class="ui-index">
+    <h1>飞机大作战</h1>
+    <div class="btn-group">
+      <button class="btn">开始游戏</button>
+      <button class="btn">游戏说明</button>
+      <button class="btn">退出游戏</button>
+    </div>
+  </div>
+  <div class="ui-intro">
+    <p>
+      飞机大作战游戏说明飞机大作战游戏说明飞机大作战游戏说明飞机大作战游戏说明飞机大作战游戏说明飞机大作战游戏说明
+    </p>
+    <button class="closeIntro">我知道了</button>
+  </div>
 </body>
-
+<script src="index.js"></script>
+<script>
+  window.onbeforeunload = function(event){
+  return "确认退出游戏？"; 
+};
+</script> 
 </html>
