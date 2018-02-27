@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>TITLE</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-	<style>
-		*{
-			box-sizing: border-box;
-		}
-		html,body{
-			margin: 0;
-			padding: 0;
-			width: 100%;
-		}
-		a:link{
-			text-decoration: none;
-			color: black;
-		}	
-		a:hover{
-			text-decoration: line-through;
-			transition: text-decoration 1s;
-		}
-	</style>
+  <title>TITLE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    a:link {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      text-decoration: line-through;
+      transition: text-decoration 1s;
+    }
+  </style>
 </head>
+
 <body>
-	<ul>
-		<li>
-			<a href="TV/index.html">美剧</a>
-		</li>
-	</ul>
+  <ul>
+    <li>
+      <a href="TV/index.html">美剧</a>
+    </li>
+  </ul>
 </body>
+
+<script>
+  function User(id, name) {
+    this.id = id;
+    this.name = name;
+    this.go = function () {
+      console.log("GO!"+this.name);
+    }
+  }
+  function Stu(id, name) {
+    User.call(this, id, name);
+  }
+  var stu = new Stu(1,2);
+  console.log(stu);
+  function teah(id,name){
+    Stu.call(this,id,name);
+  }
+</script>
+
 </html>
